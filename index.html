@@ -4,32 +4,46 @@
     
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nikita Filipenko Web 3</title>
+    <title>Nikita Filipenko Web 5</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="stylesnew.css">
 </head>
 <body>
-    <header class="mb-2" id="elem-border">
+    <header class="mb-2">
         <div class="container-lg">
           <img class="mt-1" src="logo.jpg" alt="logo">
-          <div class="ht"><strong>Filipenko Web 3</strong></div>
+          <div class="ht"><strong>Filipenko Web 5</strong></div>
         </div>
       </header>
   
-      <div class="header_nav" id="elem-border">
-        <a href="#task1" class="nav_item" id="elem-border">Links</a>
-        <a href="#tablez" class="nav_item" id="elem-border">Table</a>
-        <a href="#forma" class="nav_item" id="elem-border">Form</a>
-      </div>
+      <nav>
+        <div class="container-lg">
+          <ul
+            class=" nav flex-column flex-sm-row justify-content-sm-center text-center">
+            <li class="nav-item">
+              <a class="m-1 nav-link" aria-current="page" href="#task1">Links</a>
+            </li>
+            <li class="nav-item">
+              <a class="m-1 nav-link" href="#tablez">Table</a>
+            </li>
+            <li class="nav-item">
+              <a class="m-1 nav-link" href="#forma">Form</a>
+            </li>
+            <li class="nav-item">
+                <a class="m-1 nav-link" href="#calk">Calculator</a>
+              </li>
+          </ul>
+        </div>
       </nav>
-    <div class="content">
-        <div class="main">
-            <div class="main_list" id="elem_border">
+      
+      <div class="container-fluid flex flex-column d-flex p-4" >
+        <div class="order-2 order-md-1 m-3 justify-content-center  main_list" id="elem-border">
                 
-                <h1 class="bordered" id="task1">Список ссылок:</h1>
+                <h1 id="task1">Список ссылок:</h1>
                 <ul>
                     <li><a href="http://kubsu.ru/">Абсолютная ссылка на главную страницу сайта КубГУ</a></li>
                     <li><a href="https://kubsu.ru/"> Абсолютная ссылка на главную страницу сайта КубГУ в протоколе https</a></li>
-                    <li><a href="https://www.kubsu.ru/ru"><img src="image.jpg" width="400" height="200" alt="flower"></a></li>
+                    <li><a href="https://www.kubsu.ru/ru"><img src="image.jpg" width="200" height="200" alt="flower"></a></li>
                     <li>
                         <p>Список ссылок навигации сайта:</p>
                         <nav>
@@ -77,9 +91,10 @@
                 <img usemap="#infog" src="figures.png" alt="">
                 <br>
             </div>
-            <div class="main_table" id="elem_border">
-                <table class="bordered">
-                    <h2 class="bordered" id="tablez">Таблица</h2>
+      
+            <div class="order-1 order-md-2 m-3 justify-content-center main_table" id="elem-border">
+                <table >
+                    <h2  id="tablez">Таблица</h2>
                     
                         <tr class="first">
                             <th>Колонка 1 </th>
@@ -121,7 +136,8 @@
                     </table>
                
             </div>
-            <div class="main_form" id="elem_border">
+      
+            <div class="order-3 m-3 justify-content-center" id="elem-border">
                 <h1 class="centr" id="forma" class="bordered">Форма</h1>
             <form method="POST">
                 <label>
@@ -176,11 +192,34 @@
                 <input id="down" type="submit" value="Сохранить">
             </form>
             </div>
+
+            <div class="order-3 m-3 justify-content-center" id="elem-border">
+                <h2 id="calculator">Калькулятор стоимости товаров</h2>
+                <p> Выберите товар:
+                    <select id="productOptions" required>
+                        <option>Помидор 10 руб.</option>
+                        <option>Огурец 15 руб.</option>
+                        <option>Апельсин 20 руб.</option>
+                        <option>Помело 50 руб.</option>
+                        <option>Грейпфрут 100 руб.</option>
+                    </select></p>
+                <input id="quantity" name="quantity" type="number" min="1" required>
+                <button id="button">Посчитать</button>
+                <p id="result"></p>
+                <script src="calculate.js"></script>
+        
+                
+            </div>
         </div>
-    </div>
-    <footer class="Efooter">
-        <span>&copy; Филипенко Никита</span>
+    
+    
+
+    <footer class="row p-4" > 
+    
+        <div class="">&copy; Филипенко Никита</div>
     </footer>
+    
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     
 </body>
 </html>
